@@ -2,11 +2,7 @@ let express = require("express");
 let app = express();
 
 const App = () => {
-  return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  );
+  console.log("Hello World");
 };
 
 export default App;
