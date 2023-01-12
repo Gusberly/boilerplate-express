@@ -1,10 +1,15 @@
 let express = require("express");
 let app = express();
+require("dotenv").config();
 
-app.get("/", (req, res) => {
-  res.send("Hello Express");
-});
+var res = "Hello json".toUpperCase();
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+if (process.env.MESSAGE_STYLE === uppercase) {
+  res = "Hello json".toUpperCase();
+} else {
+  res = "Hello json";
+}
+
+app.get("/json", (req, res) => {
+  res.json({ message: "Hello json" });
 });
